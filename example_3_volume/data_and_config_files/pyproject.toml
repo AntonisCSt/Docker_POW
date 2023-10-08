@@ -1,0 +1,11 @@
+[tool.pylint.messages]
+disable = ["missing-docstring", "missing-final-newline"]
+
+[tool.isort]
+multi_line_output = 3
+line_length = 88
+include_trailing_comma = true
+
+[tool.black]
+line_length = 88
+skip-string-normalization = true #for not conflicting with isort

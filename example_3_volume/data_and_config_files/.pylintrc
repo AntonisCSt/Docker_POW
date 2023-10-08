@@ -1,0 +1,2 @@
+[pylint]
+disable = missing-docstring, missing-final-newline,invalid-name,singleton-comparison
