@@ -1,5 +1,3 @@
-# Fast API docker example
-
 From the Restful API project we copy the folcers and files:
 
 * `/schema`: the pydantic schema that is used by the FAST API app
@@ -27,7 +25,6 @@ VOLUME /app/volume_data
 COPY schema schema
 COPY functions functions
 COPY prediction_service.py .
-COPY bike_pipeline_daily_predict.pkl
 
 COPY requirements.txt .
 
@@ -44,7 +41,7 @@ cd inside the excersice FASTAPI folder:
 
 `docker build -t fast_api .`
 
-`docker run -p 8000:80 fast_api`
+`docker run -v [your absolute_path]\Docker\excersice_FASTapi\volume_data:/app/volume_data -p 8000:80 fast_api`
 
 Use http://localhost:8000/ from your machine, if you get http error connection.
 
